@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pismo</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        height: 100%;
+      }
+      body {
+        background-image: url(flor.gif);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        max-width: 450px;
+        flex-direction: column;
+      }
+      .cert {
+        width: 96%;
+        max-width: 500px;
+        height: auto;
+        display: block;
+        opacity: 0;
+      }
+      .conf {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        max-width: unset;
+        width: 189%;
+      }
+      .conf,
+      .cert {
+        transition: opacity 1s ease;
+      }
+      .text1 {
+        opacity: 0;
+        position: absolute;
+        /* position: relative;
+        left: 50%;
+        top: 50%; */
+        /* transform: translate(-50%, -50%); */
+        transition: opacity 1s ease;
+        font-size: 2em;
+        color: red;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        width: 90%;
+        text-align: center;
+        backdrop-filter: brightness(0.1);
+      }
+      .text2 {
+        opacity: 0;
+        position: absolute;
+        /* left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%); */
+        transition: opacity 1s ease;
+        font-size: 3em;
+        color: red;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        width: 90%;
+        text-align: center;
+        backdrop-filter: brightness(0.1);
+      }
+      .text3 {
+        opacity: 0;
+        position: absolute;
+        transition: opacity 1s ease;
+        font-size: 3em;
+        color: red;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        width: 90%;
+        text-align: center;
+        backdrop-filter: brightness(0.1);
+      }
+      .text1,
+      .text2,
+      .text3 {
+        margin: 2% auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img class="conf" src="conf.gif" alt="" />
+      <img class="cert" src="cert.png" alt="" />
+      <p class="text1">
+        vjerujem da su ti ostali pozeljeli zdravlje srecu i sve to
+      </p>
+      <p class="text2">ja ti zelim puno zena</p>
+      <p class="text3">sad cu maknut ovo da mozes gledati florence</p>
+    </div>
+
+    <script>
+      setTimeout(function () {
+        document.querySelector(".conf").style.opacity = "0";
+        document.querySelector(".cert").style.opacity = "1";
+      }, 4000);
+
+      setTimeout(function () {
+        document.querySelector(".text1").style.opacity = "1";
+        document.querySelector(".text1").style.position = "relative";
+      }, 7000);
+      setTimeout(function () {
+        document.querySelector(".text2").style.opacity = "1";
+        document.querySelector(".text2").style.position = "relative";
+      }, 10000);
+      setTimeout(function () {
+        document.querySelector(".text3").style.opacity = "1";
+        document.querySelector(".text3").style.position = "relative";
+      }, 12000);
+      setTimeout(function () {
+        document.querySelector(".cert").remove();
+        document.querySelector(".text1").remove();
+        document.querySelector(".text2").remove();
+        document.querySelector(".text3").remove();
+      }, 17000);
+    </script>
+  </body>
+</html>
